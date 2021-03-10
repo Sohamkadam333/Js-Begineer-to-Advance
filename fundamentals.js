@@ -286,3 +286,335 @@ console.log(val);
 
 
 // 9 Object literal**********************************************
+/*
+const person = {
+        firstName: 'soham',
+        lastName: 'kadam',
+        age: 21,
+        email: 'sohamkadam@gmail.com',
+        hobbies: ['music', 'sports'],
+        address: {
+                city: 'Anagar',
+                state: 'MH'
+        },
+        getBirthYear: function () {
+                return 2021 - this.age;
+        }
+}
+
+let val = 0;
+val = person;
+
+// get specific values
+val = person.firstName;
+val = person['firstName'];
+val = person.age;
+val = person.hobbies[1];
+val = person.address.state;
+val = person.getBirthYear();
+
+
+const people = [
+        { name: 'john', age: 30 },
+        { name: 'mike', age: 32 },
+        { name: 'duke', age: 40 }
+];
+
+for (let i = 0; i < people.length; i++) {
+        console.log(people[i].name);
+}
+
+
+// output
+console.log(val);
+*/
+
+// 10 Date & TimeStamp**********************************************
+/*
+let val = new Date();
+const today = new Date();
+let birthDay = new Date('12-19-1895 12:45:00');
+// birthDay = new Date('September 10 2000');
+// birthDay = new Date('9/10/2000');
+
+
+// get method()
+
+val = today.getDate();
+val = today.getMonth();
+val = today.getDay();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getTime();
+
+// set methods
+
+birthDay.setMonth(9);
+birthDay.setDate(9);
+birthDay.setFullYear(9);
+birthDay.setHours(9);
+birthDay.setMilliseconds(9);
+birthDay.setMinutes(9);
+birthDay.setSeconds(9);
+birthDay.setTime(9);
+// birthDay.set(9);
+
+
+
+// output
+console.log(val);
+*/
+
+// 11 If-Else & Comparison Operators**********************************************
+/*
+// const id = '100';
+let id = 100;
+
+//lose equal
+if (id == 100) {
+        console.log(`id is ${id}`);
+} else {
+        console.log('No Id');
+}
+
+//strcit equal
+if (id === 100) {
+        console.log(`id is ${id}`);
+} else {
+        console.log('No Id');
+}
+
+//Not Equal
+if (id !== 100) {
+        console.log(`id is ${id}`);
+} else {
+        console.log('No Id');
+}
+
+// test if undefined
+if (typeof id !== 'undefined') {
+        console.log(`id is ${id}`);
+} else {
+        console.log('No Id');
+}
+
+// comparison & logical operator
+
+const name = 'arjun';
+const age = 21;
+
+// AND &&
+if (age > 0 && age <= 12) {
+        console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+        console.log(`${name} is a teenager`);
+} else {
+        console.log(`${name} is a adult`);
+}
+
+// OR ||
+if (age > 0 || age <= 12) {
+        console.log(`${name} is a child`);
+} else if (age >= 13 || age <= 19) {
+        console.log(`${name} is a teenager`);
+} else {
+        console.log(`${name} is a adult`);
+}
+
+// ternary Operator
+console.log(id == 100 ? 'correct' : 'incorrect');
+*/
+
+
+
+// 12 Switch Case**********************************************
+/*
+const color = 'yellow';
+
+switch (color) {
+        case 'red': console.log('color is red'); break;
+        case 'blue': console.log('color is blue'); break;
+        case 'yellow': console.log('color is yellow'); break;
+        default: console.log('No Color'); break;
+}
+
+
+let day;
+
+switch (new Date().getDay()) {
+        case 0: console.log('sunday'); break;
+        case 1: console.log('Monday'); break;
+        case 2: console.log('tuesday'); break;
+        case 3: console.log('wedday'); break;
+        case 4: console.log('thusday'); break;
+        case 5: console.log('firay'); break;
+        case 6: console.log('satday'); break;
+}
+*/
+
+
+// 12 Function Declaration & Expressions**********************************************
+/*
+function greet(firstName) {
+        return `Hello ${firstName}`;
+}
+
+// console.log(greet('karan'));
+
+function greet(firstName = 'Arjun') {
+        return `Hello ${firstName}`;
+}
+
+// console.log(greet());
+
+
+function greet(firstName, lastName) {
+        if (typeof firstName === 'undefined') firstName = 'john'
+        if (typeof lastName === 'undefined') lastName = 'Doe'
+
+        return `Hello ${firstName} ${lastName}`;
+
+}
+
+// console.log(greet());
+
+
+
+// function Expressions
+
+// const square = function (x = 2) {
+//         return x * x;
+// }
+// console.log(square());
+
+// Immediately Invokable function Expressions - IIFE
+
+(function (name) {
+        console.log(`hello ${name}`);
+})('soham');
+*/
+
+// 13 Genearl Loops**********************************************
+/*
+//for loop
+for (let i = 0; i < 10; i++) {
+        if (i === 2) {
+                // console.log('2 is my lucky Number');
+                continue;
+        }
+
+        if (i === 5) {
+                // console.log('stop the loop');
+                break;
+        }
+
+        // console.log('Number', i);
+}
+
+// while loop
+let i = 0;
+// while (i < 10) {
+//         console.log('number', i);
+//         i++
+// }
+
+// do while
+
+// do {
+//         console.log('n', i);
+//         i++
+// } while (i < 10);
+
+
+// looping array
+const cars = ['ford', 'chevy', 'Honda', 'Toyota'];
+// for loop
+// for (let i = 0; i < cars.length; i++) {
+//         console.log(cars[i]);
+// }
+
+// forEach loop
+// cars.forEach(function (car, index, array) {
+//         console.log(car, index);
+// })
+
+// for of loop
+// for (const car of cars) {
+//         console.log(car);
+// }
+
+for (const car in cars) {
+        // console.log(car, cars[car]);
+}
+
+// MAP
+const users = [
+        { id: 1, name: 'john' },
+        { id: 2, name: 'Sara' },
+        { id: 3, name: 'Karen' }
+]
+
+const ids = users.map(function (user) {
+        return user.id;
+});
+
+console.log(ids);
+*/
+
+
+// 14 Window Methods**********************************************
+
+
+// Alert
+// alert('hello world');
+
+// prompt
+// const name = prompt('Enter your Name');
+// alert(`hii ${name}`);
+
+// condirm
+// if (confirm('Are you Sure')) {
+//         console.log('Yes');
+// } else {
+//         console.log('NO');
+// }
+
+
+let val;
+
+// outer height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// inner height and width
+val = window.innerHeight;
+val = window.innerWidth;
+
+// scrol points
+val = window.scrollY;
+val = window.scrollX;
+
+// location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+
+// redirect
+// window.location.href = "http://google.com";
+
+// reload
+// window.location.reload();
+
+// navigator Object
+val = window.navigator;
+
+
+// Output
+
+// console.log(val);
