@@ -46,7 +46,7 @@ console.log(val);
 
 
 //02 Dom Selector For Single Element********************************************
-
+/*
 // document.getElementById()
 console.log(document.getElementById('task-title'));
 
@@ -78,3 +78,58 @@ document.querySelector('li').style.color = 'red';
 document.querySelector('li:last-child').style.color = 'red';
 document.querySelector('li:nth-child(3)').style.color = 'Yellow';
 document.querySelector('li:nth-child(5)').textContent = 'Hello World';
+*/
+
+//03 Dom Selector For Multiple Element********************************************
+/*
+// document.getElementByCLassName
+const items = document.getElementsByClassName('collection-item');
+console.log(items);
+console.log(items[0]);
+console.log(items[0].className);
+items[0].style.color = 'red';
+items[3].textContent = 'Hello';
+
+const itemList = document.querySelector('ul').getElementsByClassName('collection-item');
+console.log(itemList);
+
+// document.getElementByTagName
+const lis = document.getElementsByTagName('li');
+console.log(lis);
+// console.log(lis[0]);
+// console.log(lis[0].className);
+// lis[0].style.color = 'red';
+// lis[3].textContent = 'Hello';
+
+let lisArr = Array.from(lis);
+console.log(lisArr.reverse());
+
+lisArr.forEach(function (lis, index, array) {
+  // console.log(lis.className);
+  lis.style.color = 'red';
+  // lis.textContent = 'Hello';
+  lis.textContent = `${index} Hello`;
+})
+
+
+// document.querySelectorAll;
+const newItems = document.querySelectorAll('ul.collection li.collection-item');
+console.log(newItems);
+
+newItems.forEach(function (item) {
+  console.log(item);
+})
+
+
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+liOdd.forEach(function (item) {
+  item.style.background = "#333";
+})
+
+liEven.forEach(function (item) {
+  item.style.background = "green";
+})
+
+*/
