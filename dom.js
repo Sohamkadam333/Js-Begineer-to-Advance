@@ -135,6 +135,7 @@ liEven.forEach(function (item) {
 */
 
 //04 Traversing Dom********************************************
+/*
 let val;
 
 const list = document.querySelector('ul.collection');
@@ -152,6 +153,7 @@ val = listItem;
     9-Document Itself
     10-Doctype
 */
+/*
 val = list.childNodes;
 val = list.childNodes[0];
 val = list.childNodes[0].nodeName;
@@ -200,3 +202,37 @@ val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 
 // output
 console.log(val);
+*/
+
+//04 Creating Elements********************************************
+
+//create element 
+const li = document.createElement('li');
+const link = document.createElement('a');
+
+// Add Class to li
+li.className = 'collection-item';
+
+// Add Id test to li
+li.id = 'test';
+
+// Add Attribute
+li.setAttribute('title', 'New Item')
+
+// crate text node and append to li
+li.appendChild(document.createTextNode('Hello item'));
+
+// Add class to link
+link.className = 'delete-item secondary-content'
+
+// Add icon to link
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link into li
+li.appendChild(link);
+
+// append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+
+console.log(li);
