@@ -133,3 +133,70 @@ liEven.forEach(function (item) {
 })
 
 */
+
+//04 Traversing Dom********************************************
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+
+// get child nodes
+/*
+// Number OF Nodes
+    1-Element
+    2-Attribute
+    3-Text Node
+    8-Comment
+    9-Document Itself
+    10-Doctype
+*/
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
+
+// get childrens //Mostly Used
+val = list.children;
+val = list.children[0];
+val = list.children[1];
+val = list.children[2];
+
+// children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+
+// first Child
+val = list.firstChild;   //return Node
+val = list.firstElementChild;  //return html collection
+
+// Last Child
+val = list.lastChild;   //return Node
+val = list.lastElementChild;   //return Node
+
+// child count elements
+val = list.childElementCount;
+
+
+// get parent Nodes
+val = listItem.parentNode;
+val = listItem.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+val = listItem.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+
+// get next Sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+// get next Sibling
+// val = listItem.previousSibling;
+// val = listItem.previousElementSibling;
+// val = listItem.nextElementSibling.nextElementSibling;
+
+// output
+console.log(val);
