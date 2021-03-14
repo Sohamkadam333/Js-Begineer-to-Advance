@@ -347,7 +347,7 @@ clearTask.addEventListener('click', function (event) {
 */
 
 //08 Mouse Events********************************************
-
+/*
 const clearTask = document.querySelector('.clear-tasks');
 const card = document.querySelector('.card');
 const heading = document.querySelector('#task-title');
@@ -391,4 +391,104 @@ function runEvent(event) {
   document.body.style.background = `rgb(${event.offsetX},${event.offsetY},100`;
 
 
+}
+
+*/
+
+//09 Keyboard and Input Events********************************************
+/*
+const form = document.querySelector('form');
+const task = document.getElementById('task');
+const heading = document.querySelector('h5');
+
+// submit event
+// form.addEventListener('submit', runEvent);
+
+
+// key down event
+// task.addEventListener('keydown', runEvent);
+
+
+// keyup event
+// task.addEventListener('keyup', runEvent);
+
+
+// keyupress
+// task.addEventListener('keypress', runEvent);
+
+// focus event
+// task.addEventListener('focus', runEvent);
+
+// Blur event
+// task.addEventListener('blur', runEvent);
+
+// CUt event
+// task.addEventListener('cut', runEvent);
+
+
+// paste event
+// task.addEventListener('paste', runEvent);
+
+
+// input event
+task.addEventListener('input', runEvent);
+
+
+// clear input
+task.value = '';
+
+function runEvent(event) {
+  console.log(`EventType:: ${event.type}`);
+
+  console.log(event.target.value);
+
+
+  // heading.innerText = event.target.value;
+
+
+  // get value
+  // console.log(task.value);
+  // event.preventDefault();
+}
+*/
+
+
+//10 Event Bubbling and Event Deligation********************************************
+
+// event Bubbling
+/*
+const cardTitle = document.querySelector('.card-title');
+const cardContent = document.querySelector('.card-content');
+const card = document.querySelector('.card');
+
+
+
+cardTitle.addEventListener('click',
+  function call(event) {
+    console.log('card title');
+  })
+
+cardContent.addEventListener('click',
+  function call(event) {
+    console.log('card content');
+  })
+
+card.addEventListener('click',
+  function call(event) {
+    console.log('card');
+  })
+*/
+
+
+// Event Deligation
+
+document.body.addEventListener('click', deleteItem);
+
+
+function deleteItem(event) {
+
+  if (event.target.parentElement.classList.contains('delete-item')) {
+
+    console.log('delete item');
+  }
 }
