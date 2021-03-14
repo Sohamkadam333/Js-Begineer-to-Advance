@@ -204,9 +204,9 @@ val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
 console.log(val);
 */
 
-//04 Creating Elements********************************************
-
-//create element 
+//05 Creating Elements********************************************
+/*
+//create element
 const li = document.createElement('li');
 const link = document.createElement('a');
 
@@ -236,3 +236,68 @@ document.querySelector('ul.collection').appendChild(li);
 
 
 console.log(li);
+*/
+
+//06 Removing and Replacing Elements********************************************
+/*
+// Replacing Elements
+
+// create Element
+const newHeading = document.createElement('h2');
+
+// Add id to newHeading
+newHeading.id = 'task-title';
+
+// Add text Node to newHeading
+newHeading.appendChild(document.createTextNode('Task List'));
+
+// Get Old Heading
+const oldHeading = document.getElementById('task-title');
+
+// get parent of old heading
+// console.log(oldHeading.parentElement);
+const cardAction = document.querySelector('.card-action');
+
+
+// replace Elements
+cardAction.replaceChild(newHeading, oldHeading);
+
+
+
+// console.log(newHeading);
+
+// Remving Elements
+
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul.collection');
+
+
+// removing lis1 elements
+lis[0].remove();
+
+// remove child element
+list.removeChild(lis[3])
+
+// selectig first li
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+let val;
+
+val = link.className;
+val = link.classList;
+val = link.classList.add('test');
+val = link;
+
+
+// Attribute
+val = link.getAttribute('href');
+val = link.hasAttribute('href');
+val = link.setAttribute('href', 'http://www.google.com');
+val = link.setAttribute('title', 'GOOGLE');
+val = link;
+
+
+
+console.log(val);
+*/
