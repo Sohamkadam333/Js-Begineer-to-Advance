@@ -345,3 +345,50 @@ clearTask.addEventListener('click', function (event) {
   console.log(val);
 })
 */
+
+//08 Mouse Events********************************************
+
+const clearTask = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('#task-title');
+console.log(clearTask);
+
+// Mouse click event
+// clearTask.addEventListener('click', runEvent);
+
+// mouse Double click Event
+// clearTask.addEventListener('dblclick', runEvent);
+
+// mouse Down Event
+// clearTask.addEventListener('mousedown', runEvent);
+
+// mouse up Event
+// clearTask.addEventListener('mouseup', runEvent);
+
+// Mouse Enter Event
+// card.addEventListener('mouseenter', runEvent);
+
+// Mouse Leave Event
+// card.addEventListener('mouseleave', runEvent);
+
+// Mouse over Event
+// card.addEventListener('mouseover', runEvent);
+
+// Mouse out Event
+// card.addEventListener('mouseout', runEvent);
+
+// Mouse over Event
+card.addEventListener('mousemove', runEvent);
+
+
+function runEvent(event) {
+  console.log(`Event Type: ${event.type}`);
+  // console.log(`${event.offsetY} ${event.offsetX}`);
+
+  heading.textContent = `OffsetX:${event.offsetX} OffsetY:${event.offsetY}`;
+  event.preventDefault();
+
+  document.body.style.background = `rgb(${event.offsetX},${event.offsetY},100`;
+
+
+}
