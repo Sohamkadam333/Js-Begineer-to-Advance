@@ -301,3 +301,47 @@ val = link;
 
 console.log(val);
 */
+
+//07 Event Listner & Event OBject********************************************
+/*
+// const clickMe = document.querySelector('.clickme');
+// const ulList = document.querySelector('.ullist');
+
+// clickMe.addEventListener('click', function () {
+//   ulList.classList.toggle('hidden');
+//   // ulList.classList.add('visible');
+//   console.log('hii');
+// })
+
+
+const clearTask = document.querySelector('.clear-tasks');
+// clearTask.addEventListener('click', function () {
+//   console.log('hello world');
+// })
+
+clearTask.addEventListener('click', function (event) {
+  // console.log('hello world');
+  val = event.target.className;
+  val = event.target.classList;
+
+  // event type
+  val = event.type;
+
+  // click timestamp
+  val = event.timeStamp;
+
+  // co-ordinate events relative to window
+  val = event.clientY;
+  val = event.clientX;
+
+  // co-ordinate events relative to element
+  val = event.offsetY;
+  val = event.offsetX;
+
+
+  event.preventDefault();
+
+
+  console.log(val);
+})
+*/
