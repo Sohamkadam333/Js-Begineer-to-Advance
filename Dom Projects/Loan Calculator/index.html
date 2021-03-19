@@ -12,6 +12,13 @@
       crossorigin="anonymous"
     />
 
+    <style>
+      #loading,
+      #results {
+        display: none;
+      }
+    </style>
+
     <title>Loan Calculator</title>
   </head>
   <body class="bg-dark">
@@ -64,10 +71,10 @@
                 />
               </div>
             </form>
-            <!-- loaher -->
-            <!-- <div id="loading">
+            <!-- loader -->
+            <div id="loading">
               <img src="assets/Infinity-1.8s-203px.gif" alt="" />
-            </div> -->
+            </div>
             <!-- results -->
             <div id="results">
               <h5>Results</h5>
@@ -78,7 +85,7 @@
                     type="number"
                     class="form-control"
                     name=""
-                    id="monthly-payment"
+                    id="monthlyPayment"
                     disabled
                   />
                 </div>
@@ -90,7 +97,7 @@
                     type="number"
                     class="form-control"
                     name=""
-                    id="total-payment"
+                    id="totalPayment"
                     disabled
                   />
                 </div>
@@ -102,7 +109,7 @@
                     type="number"
                     class="form-control"
                     name=""
-                    id="total-interest"
+                    id="totalInterest"
                     disabled
                   />
                 </div>
